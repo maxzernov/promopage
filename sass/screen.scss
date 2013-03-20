@@ -6,9 +6,11 @@
 @import "compass/reset";
 @import "compass/css3";
 
-$linkColor:hsl(215, 50, 50);
+//$linkColor:hsl(215, 50, 50);
+$linkColor:#4ac8ed;
 $menuHight:80px;
 $vGap:20px;
+$dummy: #efefef;
 /*==================
    Helpers
 ====================*/
@@ -75,14 +77,17 @@ body{
 }
 
 .b-logo{
-display:inline-block;
-height:$menuHight;
+    background:url(../layout/logo.png) no-repeat;
+    width:120px;
+    height:80px;
+    display:inline-block;
+    height:$menuHight;
 }
 
 .b-figure{
 	width:225px;
 	height:150px;
-	background:#bababa;
+	background:$dummy;
 	display:inline-block;
 	@include single-box-shadow(rgba(0,0,0,.3), 0, 2px, 2px, 0);
 
@@ -97,12 +102,14 @@ height:$menuHight;
   	line-height:$menuHight; 
 	text-align:middle;
 	display:inline-block;
-	margin-left:1em;
+	padding:0 1em;
 	font-size:16px;
 	text-decoration:none;
 	color:$linkColor;
 	&:hover{
-	   border-bottom:2px solid $linkColor;
+	   //border-bottom:2px solid $linkColor;
+	   background-color:$linkColor;
+	   color:#fff;
 	}
    }
 }
@@ -122,5 +129,5 @@ height:$menuHight;
 .b-movie{
 width: 640px;
 height:480px;
-background-color:#bbb;
+background-color:$dummy;
 }
