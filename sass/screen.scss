@@ -1,0 +1,126 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+
+$linkColor:hsl(215, 50, 50);
+$menuHight:80px;
+$vGap:20px;
+/*==================
+   Helpers
+====================*/
+.fl{
+   float:left;
+}
+.fr{
+   float:right;
+}
+.cf:before{
+   content:".";
+   display:block;
+   height:0;
+   width:0;
+   clear:both;
+}
+.tac{
+   text-align:center;
+}
+.ac{
+   margin:0 auto;
+}
+/*==================
+   Styles
+====================*/
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300&subset=cyrillic-ext,latin-ext);
+body{
+   //font-family:Helvetica, Arial, Verdana, sans-serif;
+   font-family: 'Roboto Condensed', Arial, sans-serif;
+   font-size:14px;
+   color: hsl(215, 25, 60);
+}
+.l-wrapper{
+   width:100%;
+}
+
+.b-footer{
+   line-height:$menuHight;
+   vertical-align:middle;
+}
+
+.l-header{
+   position:fixed;
+   width:100%;
+   top:0;
+   left:0;
+   height:$menuHight;
+   z-index:1000;
+   background-color:#FFF;
+   @include single-box-shadow(rgba(0,0,0,.1), 0, 2px, 2px, 0);
+}
+.l-row{
+   width:960px;
+   margin:0 auto;
+}
+.l-section{
+   min-height:400px;
+   padding-top:$menuHight + $vGap;
+}
+
+.b-section__header{
+   font-size:18px;
+   margin-bottom:$vGap;
+}
+
+.b-logo{
+display:inline-block;
+height:$menuHight;
+}
+
+.b-figure{
+	width:225px;
+	height:150px;
+	background:#bababa;
+	display:inline-block;
+	@include single-box-shadow(rgba(0,0,0,.3), 0, 2px, 2px, 0);
+
+}
+
+.b-menu{
+
+}
+.b-menu__item{
+   & a{
+  	height:$menuHight; 
+  	line-height:$menuHight; 
+	text-align:middle;
+	display:inline-block;
+	margin-left:1em;
+	font-size:16px;
+	text-decoration:none;
+	color:$linkColor;
+	&:hover{
+	   border-bottom:2px solid $linkColor;
+	}
+   }
+}
+
+.b-list{
+   &.m-list-h{
+      .b-list__item{
+	 display:inline-block;	      
+	 margin-left:20px;
+	 &:first-child{
+	    margin-left:0;	
+	 }
+      }
+   }
+}
+
+.b-movie{
+width: 640px;
+height:480px;
+background-color:#bbb;
+}
