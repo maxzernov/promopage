@@ -8,6 +8,13 @@
    <!--[if IE]>
       <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
    <![endif]-->
+<link rel="stylesheet" href="fancyBox/source/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
+<link rel="stylesheet" href="fancyBox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+
+<script src="fancyBox/lib/jquery-1.9.0.min.js" type="text/javascript"></script>
+<script src="fancyBox/source/jquery.fancybox.pack.js?v=2.1.4" type="text/javascript"></script>
+<script src="fancyBox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7" type="text/javascript"></script>
+<script src="scripts/main.js" type="text/javascript"></script>
 </head>
 <body>
    <div class="l-wrapper">
@@ -34,15 +41,29 @@
       <div class="l-section" id="works">
 	 <div class="l-row">
 	    <h2 class="b-section__header">Наши работы</h2>
-	    <ul class="b-list m-list-h">
+        <ul class="b-list m-list-h" id="portfolio">
 	       <li class="b-list__item">
-	      	<img src="/images/img1_thumb" alt="" class="b-figure"/> 
-	       </li><li class="b-list__item">
-	      	<img src="/images/img1_thumb" alt="" class="b-figure"/> 
-	       </li><li class="b-list__item">
-	      	<img src="/images/img1_thumb" alt="" class="b-figure"/> 
-	       </li><li class="b-list__item">
-	      	<img src="/images/img1_thumb" alt="" class="b-figure"/> 
+		    <a href="images/img1_big.jpg"id="single_image" rel="group1" class="b-portfolio-item fancybox">
+			<img src="images/img1_thumb.jpg" alt="" class="b-figure"/> 
+		    </a>
+	       </li><!--
+
+	       --><li class="b-list__item">
+		    <a href="images/img1_big.jpg"id="single_image" rel="group1" class="b-portfolio-item fancybox">
+			<img src="images/img1_thumb.jpg" alt="" class="b-figure"/> 
+		    </a>
+	       </li><!--
+
+	       --><li class="b-list__item">
+		    <a href="images/img1_big.jpg"id="single_image" rel="group1" class="b-portfolio-item fancybox">
+			<img src="images/img1_thumb.jpg" alt="" class="b-figure"/> 
+		    </a>
+	       </li><!--
+
+	       --><li class="b-list__item">
+		    <a href="images/img1_big.jpg"id="single_image" rel="group1" class="b-portfolio-item fancybox">
+			<img src="images/img1_thumb.jpg" alt="" class="b-figure"/> 
+		    </a>
 	       </li>
 	    </ul>
 	 </div>
@@ -58,5 +79,6 @@
 	 </div>	 
       </div>
    </div> 
+
 </body>
 </html>

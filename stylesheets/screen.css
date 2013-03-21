@@ -168,12 +168,9 @@ body {
   height: 150px;
   background: #efefef;
   display: inline-block;
-  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
 }
 
-/* line 100, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 .b-menu__item a {
   height: 80px;
   line-height: 80px;
@@ -184,23 +181,29 @@ body {
   text-decoration: none;
   color: #4ac8ed;
 }
-/* line 109, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 .b-menu__item a:hover {
   background-color: #4ac8ed;
   color: #fff;
 }
 
-/* line 119, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 .b-list.m-list-h .b-list__item {
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 4px;
+  padding: 4px;
+  background-color: #FFF;
+  border: 1px solid #dddddd;
+  -webkit-border-radius: 5px 5px;
+  -moz-border-radius: 5px / 5px;
+  border-radius: 5px / 5px;
 }
-/* line 122, ../sass/screen.scss */
+/* line 129, ../sass/screen.scss */
 .b-list.m-list-h .b-list__item:first-child {
   margin-left: 0;
 }
 
-/* line 129, ../sass/screen.scss */
+/* line 136, ../sass/screen.scss */
 .b-movie {
   width: 640px;
   height: 480px;
