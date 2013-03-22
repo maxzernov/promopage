@@ -88,7 +88,7 @@ body{
 	width:225px;
 	height:150px;
 	background:$dummy;
-	display:inline-block;
+	display:block;
 	&:hover {
 
 	}
@@ -121,12 +121,13 @@ body{
       .b-list__item{
 	 display:inline-block;	      
 	 margin-left:4px;
+	 margin-bottom:2px;
 	 padding:4px;
 	 background-color: #FFF;
 	 //@include single-box-shadow(rgba(0,0,0,.3), 0, 1px, 2px, 0);
 	 border:1px solid #ddd;
-@include border-radius(5px, 5px);
-	 &:first-child{
+	 //@include border-radius(5px, 5px);
+	 &:first-child, &:nth-child(5n), .m-fifth{
 	    margin-left:0;	
 	 }
       }
@@ -134,7 +135,11 @@ body{
 }
 
 .b-movie{
-width: 640px;
-height:480px;
-background-color:$dummy;
+    width: 640px;
+    height:auto;
+    border:1px solid #ddd;
+    padding:4px;
+    & iframe{
+         display:block;
+    }
 }

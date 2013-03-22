@@ -167,7 +167,7 @@ body {
   width: 225px;
   height: 150px;
   background: #efefef;
-  display: inline-block;
+  display: block;
 }
 
 /* line 102, ../sass/screen.scss */
@@ -191,21 +191,24 @@ body {
 .b-list.m-list-h .b-list__item {
   display: inline-block;
   margin-left: 4px;
+  margin-bottom: 2px;
   padding: 4px;
   background-color: #FFF;
   border: 1px solid #dddddd;
-  -webkit-border-radius: 5px 5px;
-  -moz-border-radius: 5px / 5px;
-  border-radius: 5px / 5px;
 }
-/* line 129, ../sass/screen.scss */
-.b-list.m-list-h .b-list__item:first-child {
+/* line 130, ../sass/screen.scss */
+.b-list.m-list-h .b-list__item:first-child, .b-list.m-list-h .b-list__item:nth-child(5n), .b-list.m-list-h .b-list__item .m-fifth {
   margin-left: 0;
 }
 
-/* line 136, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 .b-movie {
   width: 640px;
-  height: 480px;
-  background-color: #efefef;
+  height: auto;
+  border: 1px solid #dddddd;
+  padding: 4px;
+}
+/* line 142, ../sass/screen.scss */
+.b-movie iframe {
+  display: block;
 }
