@@ -3,6 +3,16 @@ $(document).ready(function(){
 		openEffect	: 'none',
 		closeEffect	: 'none'
 	});
+
+	$('.loadYoutubeLink').click(function(){
+	   $(this).load('youtube.html'); 
+	});
+
+var controller = $.superscrollorama();
+
+controller.addTween('#presentation', TweenMax.from( $('#presentation'), .25, {css:{left:'-3000px'}, ease:Quad.easeInOut}));
+controller.addTween('#works', TweenMax.from( $('#works'), .25, {css:{left:'-3000px'}, ease:Quad.easeInOut}));
+
 var css3_nthChild = supportsSelector("nth-child");
 
     if(!css3_nthChild){

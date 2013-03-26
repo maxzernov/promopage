@@ -107,21 +107,34 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   font-family: "Roboto Condensed", Arial, sans-serif;
   font-size: 14px;
-  color: #8095b3;
+  color: #fff;
+  background: url(../layout/patterns.png) repeat;
 }
 
-/* line 46, ../sass/screen.scss */
+/* line 48, ../sass/screen.scss */
 .l-wrapper {
   width: 100%;
 }
 
-/* line 50, ../sass/screen.scss */
+/* line 52, ../sass/screen.scss */
 .b-footer {
   line-height: 80px;
   vertical-align: middle;
+  background: url(../layout/patterns3.png) repeat;
+  position: relative;
+}
+/* line 57, ../sass/screen.scss */
+.b-footer:before {
+  content: "";
+  background: url(../layout/patterns3-arrow.png) repeat;
+  height: 5px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: -5px;
 }
 
-/* line 55, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 .l-header {
   position: fixed;
   width: 100%;
@@ -129,40 +142,40 @@ body {
   left: 0;
   height: 80px;
   z-index: 1000;
-  background-color: #FFF;
-  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* line 65, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 .l-row {
   width: 960px;
   margin: 0 auto;
 }
 
-/* line 69, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 .l-section {
   min-height: 400px;
   padding-top: 100px;
+  padding-bottom: 50px;
 }
 
-/* line 74, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 .b-section__header {
   font-size: 18px;
   margin-bottom: 20px;
 }
 
-/* line 79, ../sass/screen.scss */
+/* line 93, ../sass/screen.scss */
 .b-logo {
-  background: url(../layout/logo.png) no-repeat;
   width: 120px;
   height: 80px;
   display: inline-block;
   height: 80px;
 }
 
-/* line 87, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 .b-figure {
   width: 225px;
   height: 150px;
@@ -170,7 +183,34 @@ body {
   display: block;
 }
 
-/* line 102, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
+#works {
+  left: 0px;
+  position: relative;
+}
+
+/* line 115, ../sass/screen.scss */
+#presentation {
+  left: 0px;
+  position: relative;
+}
+
+/* line 119, ../sass/screen.scss */
+.works {
+  background: url(../layout/patterns2.png);
+}
+
+/*
+.contact{
+   background:#bababa url(../layout/patterns4.png);
+	background-position: 0 0;
+   @include single-transition(all, 1s, ease);
+   &:hover{
+	background-position: 100px 0;
+   }
+}
+*/
+/* line 136, ../sass/screen.scss */
 .b-menu__item a {
   height: 80px;
   line-height: 80px;
@@ -179,36 +219,41 @@ body {
   padding: 0 1em;
   font-size: 16px;
   text-decoration: none;
-  color: #4ac8ed;
+  color: #222222;
 }
-/* line 111, ../sass/screen.scss */
+/* line 145, ../sass/screen.scss */
 .b-menu__item a:hover {
-  background-color: #4ac8ed;
+  background-color: #3868a7;
   color: #fff;
 }
 
-/* line 121, ../sass/screen.scss */
+/* line 155, ../sass/screen.scss */
 .b-list.m-list-h .b-list__item {
   display: inline-block;
   margin-left: 4px;
   margin-bottom: 2px;
   padding: 4px;
+  color: #222;
   background-color: #FFF;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
   border: 1px solid #dddddd;
 }
-/* line 130, ../sass/screen.scss */
-.b-list.m-list-h .b-list__item:first-child, .b-list.m-list-h .b-list__item:nth-child(5n), .b-list.m-list-h .b-list__item .m-fifth {
+/* line 165, ../sass/screen.scss */
+.b-list.m-list-h .b-list__item:first-child, .b-list.m-list-h .b-list__item:nth-child(4n+1), .b-list.m-list-h .b-list__item .m-fifth {
   margin-left: 0;
 }
 
-/* line 137, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 .b-movie {
   width: 640px;
-  height: auto;
+  height: 360px;
   border: 1px solid #dddddd;
   padding: 4px;
+  background: white url(../layout/youtube.png) no-repeat center center;
 }
-/* line 142, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 .b-movie iframe {
   display: block;
 }
