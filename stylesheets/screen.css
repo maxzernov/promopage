@@ -101,9 +101,76 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /*==================
+    animation
+==================*/
+/* line 39, ../sass/screen.scss */
+#works {
+  left: 0px;
+  position: relative;
+}
+
+/* line 44, ../sass/screen.scss */
+#presentation {
+  left: 0px;
+  position: relative;
+}
+
+/* line 48, ../sass/screen.scss */
+#contacts {
+  left: 0px;
+  position: relative;
+}
+/* line 51, ../sass/screen.scss */
+#contacts:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 82px;
+  background: url(../layout/contacts_bg.png) no-repeat center center;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+/* line 61, ../sass/screen.scss */
+.presentation {
+  background-color: #7394c2;
+}
+/* line 63, ../sass/screen.scss */
+.presentation:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 9px;
+  background: url(../layout/wave-pattern.png) repeat center center;
+  position: absolute;
+  bottom: -7px;
+  z-index: 10;
+}
+
+/* line 74, ../sass/screen.scss */
+.preface {
+  background: url(../layout/grey_gradient_bg.jpg) repeat center top;
+  padding: 0 !important;
+}
+/* line 77, ../sass/screen.scss */
+.preface .l-row {
+  height: 450px;
+  background: url(../layout/mountain.png) no-repeat center bottom;
+  background-position: -20px 275px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+/* line 82, ../sass/screen.scss */
+.preface .l-row:hover {
+  background-position: -20px 250px;
+}
+
+/*==================
    Styles
 ====================*/
-/* line 40, ../sass/screen.scss */
+/* line 93, ../sass/screen.scss */
 body {
   font-family: "Roboto Condensed", Arial, sans-serif;
   font-size: 14px;
@@ -111,19 +178,20 @@ body {
   background: url(../layout/patterns.png) repeat;
 }
 
-/* line 48, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 .l-wrapper {
   width: 100%;
+  padding-top: 80px;
 }
 
-/* line 52, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 .b-footer {
   line-height: 80px;
   vertical-align: middle;
   background: url(../layout/patterns3.png) repeat;
   position: relative;
 }
-/* line 57, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 .b-footer:before {
   content: "";
   background: url(../layout/patterns3-arrow.png) repeat;
@@ -134,7 +202,7 @@ body {
   top: -5px;
 }
 
-/* line 68, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 .l-header {
   position: fixed;
   width: 100%;
@@ -142,32 +210,40 @@ body {
   left: 0;
   height: 80px;
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #fff;
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* line 78, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 .l-row {
   width: 960px;
   margin: 0 auto;
 }
 
-/* line 82, ../sass/screen.scss */
+/* line 136, ../sass/screen.scss */
 .l-section {
   min-height: 400px;
-  padding-top: 100px;
+  position: relative;
+  padding-top: 40px;
   padding-bottom: 50px;
 }
 
-/* line 88, ../sass/screen.scss */
+/* line 143, ../sass/screen.scss */
 .b-section__header {
   font-size: 18px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
-/* line 93, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
+.m-vpos {
+  top: 60px;
+  position: relative;
+}
+
+/* line 154, ../sass/screen.scss */
 .b-logo {
   width: 120px;
   height: 80px;
@@ -175,7 +251,19 @@ body {
   height: 80px;
 }
 
-/* line 101, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
+.b-logo-big {
+  background: url(../layout/logo_white-big.png) no-repeat;
+  display: inline-block;
+  width: 236px;
+  height: 114px;
+  position: relative;
+  top: 4px;
+  vertical-align: middle;
+  text-indent: -9999px;
+}
+
+/* line 172, ../sass/screen.scss */
 .b-figure {
   width: 225px;
   height: 150px;
@@ -183,34 +271,19 @@ body {
   display: block;
 }
 
-/* line 111, ../sass/screen.scss */
-#works {
-  left: 0px;
-  position: relative;
-}
-
-/* line 115, ../sass/screen.scss */
-#presentation {
-  left: 0px;
-  position: relative;
-}
-
-/* line 119, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 .works {
-  background: url(../layout/patterns2.png);
+  background-image: url(../layout/work_bg.png);
+  background-repeat: repeat-x;
+  background-color: #7394c2;
 }
 
-/*
-.contact{
-   background:#bababa url(../layout/patterns4.png);
-	background-position: 0 0;
-   @include single-transition(all, 1s, ease);
-   &:hover{
-	background-position: 100px 0;
-   }
+/* line 187, ../sass/screen.scss */
+.contact {
+  background: #c2cad6;
 }
-*/
-/* line 136, ../sass/screen.scss */
+
+/* line 195, ../sass/screen.scss */
 .b-menu__item a {
   height: 80px;
   line-height: 80px;
@@ -221,13 +294,13 @@ body {
   text-decoration: none;
   color: #222222;
 }
-/* line 145, ../sass/screen.scss */
+/* line 204, ../sass/screen.scss */
 .b-menu__item a:hover {
-  background-color: #3868a7;
+  background-color: #7394C2;
   color: #fff;
 }
 
-/* line 155, ../sass/screen.scss */
+/* line 214, ../sass/screen.scss */
 .b-list.m-list-h .b-list__item {
   display: inline-block;
   margin-left: 4px;
@@ -238,22 +311,56 @@ body {
   -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-  border: 1px solid #dddddd;
 }
-/* line 165, ../sass/screen.scss */
+/* line 224, ../sass/screen.scss */
 .b-list.m-list-h .b-list__item:first-child, .b-list.m-list-h .b-list__item:nth-child(4n+1), .b-list.m-list-h .b-list__item .m-fifth {
   margin-left: 0;
 }
 
-/* line 172, ../sass/screen.scss */
+/* line 231, ../sass/screen.scss */
 .b-movie {
   width: 640px;
   height: 360px;
-  border: 1px solid #dddddd;
   padding: 4px;
-  background: white url(../layout/youtube.png) no-repeat center center;
+  background: #85a8db url(../layout/youtube.png) no-repeat center center;
+  cursor: pointer;
 }
-/* line 178, ../sass/screen.scss */
+/* line 237, ../sass/screen.scss */
 .b-movie iframe {
   display: block;
+}
+
+/*==============
+     form 
+ ==============*/
+/* line 245, ../sass/screen.scss */
+.b-form {
+  width: 480px;
+}
+/* line 247, ../sass/screen.scss */
+.b-form * {
+  display: block;
+}
+
+/* line 251, ../sass/screen.scss */
+.b-input, textarea {
+  padding: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: none;
+}
+
+/* line 258, ../sass/screen.scss */
+.b-btn {
+  border: none;
+  background: #56bf4c;
+  color: #fff;
+  padding: 0.5em 1em;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+/* line 266, ../sass/screen.scss */
+.b-btn:hover {
+  background: #429f39;
 }
